@@ -1,0 +1,5 @@
+com\aliciaspringframework\mypetclinic\model\Vet.class
+com\aliciaspringframework\mypetclinic\model\Owner.class
+com\aliciaspringframework\mypetclinic\model\Person.class
+com\aliciaspringframework\mypetclinic\model\Pet.class
+com\aliciaspringframework\mypetclinic\model\PetType.class
