@@ -2,8 +2,11 @@ package com.aliciaspringframework.mypetclinic.services.map;
 
 import com.aliciaspringframework.mypetclinic.model.Pet;
 import com.aliciaspringframework.mypetclinic.services.PetService;
+import org.springframework.stereotype.Service;
+
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
