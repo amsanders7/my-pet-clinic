@@ -1,2 +1,5 @@
 com\aliciaspringframework\mypetclinic\controllers\IndexController.class
+com\aliciaspringframework\mypetclinic\bootstrap\DataLoader.class
+com\aliciaspringframework\mypetclinic\controllers\VetController.class
+com\aliciaspringframework\mypetclinic\controllers\OwnerController.class
 com\aliciaspringframework\mypetclinic\MyPetClinicApplication.class
