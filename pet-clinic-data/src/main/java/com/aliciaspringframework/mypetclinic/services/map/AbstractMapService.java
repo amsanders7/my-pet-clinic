@@ -1,6 +1,6 @@
 package com.aliciaspringframework.mypetclinic.services.map;
 
-import com.aliciaspringframework.mypetclinic.model.BaseEntity;
+import com.aliciaspringframework.mypetclinic.models.BaseEntity;
 
 import java.util.*;
 

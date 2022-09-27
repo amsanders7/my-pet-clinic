@@ -1,6 +1,6 @@
 package com.aliciaspringframework.mypetclinic.bootstrap;
 
-import com.aliciaspringframework.mypetclinic.model.*;
+import com.aliciaspringframework.mypetclinic.models.*;
 import com.aliciaspringframework.mypetclinic.services.OwnerService;
 import com.aliciaspringframework.mypetclinic.services.PetTypeService;
 import com.aliciaspringframework.mypetclinic.services.SpecialtyService;

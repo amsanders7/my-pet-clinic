@@ -1,4 +1,4 @@
-package com.aliciaspringframework.mypetclinic.model;
+package com.aliciaspringframework.mypetclinic.models;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

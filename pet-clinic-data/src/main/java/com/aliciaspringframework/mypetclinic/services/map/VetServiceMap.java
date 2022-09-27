@@ -1,7 +1,7 @@
 package com.aliciaspringframework.mypetclinic.services.map;
 
-import com.aliciaspringframework.mypetclinic.model.Specialty;
-import com.aliciaspringframework.mypetclinic.model.Vet;
+import com.aliciaspringframework.mypetclinic.models.Specialty;
+import com.aliciaspringframework.mypetclinic.models.Vet;
 import com.aliciaspringframework.mypetclinic.services.SpecialtyService;
 import com.aliciaspringframework.mypetclinic.services.VetService;
 import org.springframework.stereotype.Service;

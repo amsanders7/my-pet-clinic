@@ -1,8 +1,6 @@
 package com.aliciaspringframework.mypetclinic.services;
 
-import com.aliciaspringframework.mypetclinic.model.Owner;
-
-import java.util.List;
+import com.aliciaspringframework.mypetclinic.models.Owner;
 
 public interface OwnerService extends CrudService<Owner, Long> {
 

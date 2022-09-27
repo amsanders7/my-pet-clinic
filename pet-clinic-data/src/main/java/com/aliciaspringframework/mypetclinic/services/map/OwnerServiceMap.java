@@ -1,7 +1,7 @@
 package com.aliciaspringframework.mypetclinic.services.map;
 
-import com.aliciaspringframework.mypetclinic.model.Owner;
-import com.aliciaspringframework.mypetclinic.model.Pet;
+import com.aliciaspringframework.mypetclinic.models.Owner;
+import com.aliciaspringframework.mypetclinic.models.Pet;
 import com.aliciaspringframework.mypetclinic.services.OwnerService;
 import com.aliciaspringframework.mypetclinic.services.PetService;
 import com.aliciaspringframework.mypetclinic.services.PetTypeService;
