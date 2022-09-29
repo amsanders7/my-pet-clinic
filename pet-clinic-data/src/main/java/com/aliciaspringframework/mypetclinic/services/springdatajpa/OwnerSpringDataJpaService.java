@@ -37,8 +37,6 @@ public class OwnerSpringDataJpaService implements OwnerService {
         return owners;
     }
 
-
-
     @Override
     public Owner findById(Long aLong) {
         return ownerRepository.findById(aLong).orElse(null);
