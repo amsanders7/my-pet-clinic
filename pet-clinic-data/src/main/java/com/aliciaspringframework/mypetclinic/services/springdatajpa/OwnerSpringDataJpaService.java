@@ -5,6 +5,7 @@ import com.aliciaspringframework.mypetclinic.repositories.OwnerRepository;
 import com.aliciaspringframework.mypetclinic.repositories.PetRepository;
 import com.aliciaspringframework.mypetclinic.repositories.PetTypeRepository;
 import com.aliciaspringframework.mypetclinic.services.OwnerService;
+import java.util.List;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import java.util.HashSet;
@@ -28,6 +29,11 @@ public class OwnerSpringDataJpaService implements OwnerService {
     @Override
     public Owner findByLastName(String lastName) {
         return ownerRepository.findByLastName(lastName);
+    }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
+        return ownerRepository.findAllByLastNameLike(lastName);
     }
 
     @Override

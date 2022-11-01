@@ -5,6 +5,7 @@ import com.aliciaspringframework.mypetclinic.models.Pet;
 import com.aliciaspringframework.mypetclinic.services.OwnerService;
 import com.aliciaspringframework.mypetclinic.services.PetService;
 import com.aliciaspringframework.mypetclinic.services.PetTypeService;
+import java.util.List;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -74,5 +75,11 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
                 .filter(owner -> owner.getLastName().equalsIgnoreCase(lastName))
                 .findFirst()
                 .orElse(null);
+    }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
+        //todo - impl
+        return null;
     }
 }
