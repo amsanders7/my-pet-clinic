@@ -1,6 +1,7 @@
 package com.aliciaspringframework.mypetclinic.controllers;
 
 import com.aliciaspringframework.mypetclinic.models.Owner;
+import com.aliciaspringframework.mypetclinic.models.Pet;
 import com.aliciaspringframework.mypetclinic.models.PetType;
 import com.aliciaspringframework.mypetclinic.services.OwnerService;
 import com.aliciaspringframework.mypetclinic.services.PetService;
@@ -75,7 +76,32 @@ public class PetControllerTest {
         when(petTypeService.findAll()).thenReturn(petTypes);
 
         mockMvc.perform(post("/owners/1/pets/new"))
+            .andExpect(status().is3xxRedirection())
+            .andExpect(view().name("redirect:/owners/1"));
+
+        verify(petService).save(any());
+    }
+
+    @Test
+    void initUpdateForm() throws Exception {
+        when(ownerService.findById(anyLong())).thenReturn(owner);
+        when(petTypeService.findAll()).thenReturn(petTypes);
+        when(petService.findById(anyLong())).thenReturn(Pet.builder().id(2L).build());
+
+        mockMvc.perform(get("/owners/1/pets/2/edit"))
             .andExpect(status().isOk())
+            .andExpect(model().attributeExists("owner"))
+            .andExpect(model().attributeExists("pet"))
+            .andExpect(view().name("pets/createOrUpdatePetForm"));
+    }
+
+    @Test
+    void processUpdateForm() throws Exception {
+        when(ownerService.findById(anyLong())).thenReturn(owner);
+        when(petTypeService.findAll()).thenReturn(petTypes);
+
+        mockMvc.perform(post("/owners/1/pets/2/edit"))
+            .andExpect(status().is3xxRedirection())
             .andExpect(view().name("redirect:/owners/1"));
 
         verify(petService).save(any());
