@@ -1,9 +1,13 @@
 package com.aliciaspringframework.mypetclinic.controllers;
 
+import com.aliciaspringframework.mypetclinic.models.Vet;
 import com.aliciaspringframework.mypetclinic.services.VetService;
+import java.util.Set;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class VetController {
@@ -21,5 +25,11 @@ public class VetController {
         model.addAttribute("vets", vetService.findAll());
 
         return "vets/index";  //path in project folder
+    }
+
+    @GetMapping("/api/vets")
+    public @ResponseBody Set<Vet> getVetsJson() {
+
+        return vetService.findAll();
     }
 }
