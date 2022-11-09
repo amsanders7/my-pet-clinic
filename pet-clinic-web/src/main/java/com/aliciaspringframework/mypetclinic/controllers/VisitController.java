@@ -2,10 +2,10 @@ package com.aliciaspringframework.mypetclinic.controllers;
 
 import com.aliciaspringframework.mypetclinic.models.Pet;
 import com.aliciaspringframework.mypetclinic.models.Visit;
-import com.aliciaspringframework.mypetclinic.repositories.PetRepository;
-import com.aliciaspringframework.mypetclinic.repositories.VisitRepository;
 import com.aliciaspringframework.mypetclinic.services.PetService;
 import com.aliciaspringframework.mypetclinic.services.VisitService;
+import java.beans.PropertyEditorSupport;
+import java.time.LocalDate;
 import java.util.Map;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -31,6 +31,13 @@ public class VisitController {
     @InitBinder
     public void setAllowedFields(WebDataBinder dataBinder) {
         dataBinder.setDisallowedFields("id");
+
+        dataBinder.registerCustomEditor(LocalDate.class, new PropertyEditorSupport() {
+            @Override
+            public void setAsText(String text) throws IllegalArgumentException {
+                setValue(LocalDate.parse(text));
+            }
+        });
     }
 
     /**
